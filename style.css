@@ -6,4 +6,66 @@
 
 body {
     min-height: 100vh;
+    font-family: "Anton", serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #1A1A1A;
+}
+
+nav {
+    background-color: #e5e5e5;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: #1A1A1A;
+}
+
+nav a:hover{
+    cursor: pointer;
+    background-color: aliceblue;
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: white;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
 }
