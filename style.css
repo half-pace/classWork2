@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -80,4 +81,309 @@ nav li:first-child {
     .menu-button {
         display: block;
     }
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    height: 100%;
+    margin-bottom: 40px;
+}
+
+.header .h1 {
+    position: relative;
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 27vw;
+    line-height: 1.525;
+    padding-bottom: 8.1px;
+}
+
+.head-container {
+    border-top: 0.5px solid #e5e5e5;
+    display: flex;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;           /* this was changed col to row*/
+    gap: 100px;
+    /*background-color: wheat;*/
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+    margin: 20px;
+    height: 100%;
+}
+
+.profile-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;                        /*gap was added*/
+    margin-top: 0.1px;                /*this was changed -100 to 0.1*/
+}
+
+.profile-bio {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    flex-direction: column;
+    /*background-color: black;*/
+    /*bottom: 12rem;
+    position: relative;
+    left: 5rem;*/
+    width: 50%;
+    height: 70%;    
+}
+
+.profile-bio h1 {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-weight: normal;
+}
+
+.profile-container h2 {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 70px;
+    line-height: 1.5;
+    padding-bottom: 10px;         /*padding was added*/
+    /*position: relative;
+    right: 29.5rem;*/
+}
+
+#para1 {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    line-height: 1.5;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#list {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.profile-img {
+    position: relative;
+    /*right: 25.8rem;
+    bottom: -2rem;*/
+}
+
+.avatar {
+    max-width: 19.5rem;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 4px solid #fff;
+}
+
+.container-links {
+    border-top: 0.5px solid #e5e5e5;
+    display: flex;
+}
+
+.links-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*background-color: wheat;*/
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+    margin: 20px;
+}
+
+@media(max-width: 880px) {
+    #text3 {
+        padding-left: 40rem;
+    }
+}
+
+.links-wrap h2 {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 70px;
+    line-height: 1.5;
+    padding-right: 50rem;
+    /*position: relative;
+    right: 29.5rem;*/
+}
+
+.links {
+    /*background-color: wheat;*/
+    height: 100%;
+    width: 90%;
+    margin: 30px;
+}
+
+@media(max-width: 720px) {
+    .links {
+        width: calc(90% - 10%);
+    }
+}
+
+#btn1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.2rem;
+    padding: 20px;
+    cursor: pointer;
+    border-top: 1px solid #e5e5e5;
+    background-color: #1A1A1A;
+    color: #e5e5e5;
+    text-decoration: none;
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+#btn2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.2rem;
+    padding: 20px;
+    cursor: pointer;
+    border-top: 1px solid #e5e5e5;
+    background-color: #1A1A1A;
+    text-decoration: none;
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+#btn3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.2rem;
+    padding: 20px;
+    cursor: pointer;
+    border-top: 1px solid #e5e5e5;
+    background-color: #1A1A1A;
+    text-decoration: none;
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 25px;
+    line-height: 1.5;
+    position: relative;
+}
+
+@keyframes spacing {
+    from {
+        letter-spacing: 0px;
+    }
+
+    to {
+        letter-spacing: 5px;
+    }
+}
+
+@keyframes spacing2 {
+    from {
+        padding-left: 20px;
+    }
+    to {
+        padding-left: 70px;
+    }
+}
+
+#text:hover {
+    text-decoration: underline;
+    animation-name: spacing;
+    animation-duration: 0.5s;
+}
+
+#text2:hover {
+    text-decoration: underline;
+    animation-name: spacing;
+    animation-duration: 0.5s;
+}
+
+#text3:hover {
+    text-decoration: underline;
+    animation-name: spacing;
+    animation-duration: 0.5s;
+}
+
+#btn1:hover {
+    background-color: #e5e5e5;
+    color: #1A1A1A;
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: underline;
+    animation-name: spacing2;
+    animation-duration: 1s;
+}
+
+#btn2:hover {
+    background-color: #e5e5e5;
+    color: #1A1A1A;
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: underline;
+    animation-name: spacing2;
+    animation-duration: 1s;
+}
+
+#btn3:hover {
+    background-color: #e5e5e5;
+    color: #1A1A1A;
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: underline;
+    animation-name: spacing2;
+    animation-duration: 1s;
+}
+
+.slider-container {
+    border-top: 0.5px solid #e5e5e5;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider-container h2 {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 70px;
+    line-height: 1.5;
+    padding-bottom: 10px;         /*padding was added*/
+    /*position: relative;
+    right: 29.5rem;*/
+    margin-left: 80px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /*background-color: wheat;*/
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 100%;
+    margin: 20px;
+    background-color: white;
+}
+
+.list img{
+    object-fit: contain;
 }

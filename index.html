@@ -19,27 +19,39 @@
         <nav>
             <ul class="sidebar">
                 <li onclick=hideSideBar()><a href="#" aria-label="closing-menu"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg></a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Images</a></li>
-                <li><a href="#">Links</a></li>
-                <li><a href="#">Contact Me</a></li> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#links">Links</a></li>
+                <li><a href="#contact">Contact Me</a></li> 
             </ul>
         
 
             <ul>
-                <li><a href="#">Logo</a></li>
-                <li class="hideOnMobile"><a href="#">About</a></li>
-                <li class="hideOnMobile"><a href="#">Images</a></li>
-                <li class="hideOnMobile"><a href="#">Links</a></li>
-                <li class="hideOnMobile"><a href="#">Contact Me</a></li> 
+                <li><a href="/class_Work1/index.html">Logo</a></li>
+                <li class="hideOnMobile"><a href="#about">About</a></li>
+                <li class="hideOnMobile"><a href="#images">Images</a></li>
+                <li class="hideOnMobile"><a href="#links">Links</a></li>
+                <li class="hideOnMobile"><a href="#contact">Contact Me</a></li> 
                 <li class="menu-button" onclick=showSideBar()><a href="#" aria-label="burger-menu"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" /></svg></a></li>
             </ul>
         </nav>
+        <div class="container">
+            <div class="header">
+                <div class="h1">h</div>
+                <div class="h1">a</div>
+                <div class="h1">l</div>
+                <div class="h1">f</div>
+                <div class="h1">p</div>
+                <div class="h1">a</div>
+                <div class="h1">c</div>
+                <div class="h1">e</div>
+            </div>
+        </div>
     </header>
 
     <main>
         <section class="head-container">
-            <div class="profile-container">
+            <div class="profile-container" id="about">
                 <h2 class="text">about</h2>
                 <div class="profile-wrap">
                     <!--<h2><span id="text">about</span></h2>-->
@@ -66,23 +78,26 @@
             </div>
         </section>
 
-        <div class="slider">
+        <div class="slider-container" id="images">
+            <h2 class="img-text">Images</h2>
             <div class="list">
-                <div class="item"><img src="" alt="Image1"></div>
-                <div class="item"><img src="" alt="Image2"></div>
-                <div class="item"><img src="" alt="Image3"></div>
-                <div class="item"><img src="" alt="Image4"></div>
-                <div class="item"><img src="" alt="Image5"></div>
-                <div class="item"><img src="" alt="Image6"></div>
-                <div class="item"><img src="" alt="Image7"></div>
-                <div class="item"><img src="" alt="Image8"></div>
-                <div class="item"><img src="" alt="Image9"></div>
-                <div class="item"><img src="" alt="Image10"></div>
+                <div class="item"><img src="./img/0ef5ab36-b6df-4bb6-819e-96e817187eca.jpeg" alt="Image1"></div>
+                <div class="item"><img src="./img/download.gif" alt="Image2"></div>
+                <div class="item"><img src="./img/freakygoat.jpeg" alt="Image3"></div>
+                <div class="item"><img src="./img/gameicon.jpeg" alt="Image4"></div>
+                <div class="item"><img src="./img/halloween.jpeg" alt="Image5"></div>
+                <div class="item"><img src="./img/japanese.jpeg" alt="Image6"></div>
+                <div class="item"><img src="./img/profile.jpg" alt="Image7"></div>
+                
+            </div>
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
             </div>
         </div>
 
-        <section class="container">
-            <div class="links-wrap">
+        <section class="container-links">
+            <div class="links-wrap" id="links">
                 <h2><span id="text3">links</span></h2>
 
                 <div class="links">
