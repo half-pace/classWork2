@@ -6,6 +6,7 @@
 
 html, body {
     min-height: 100vh;
+    width: 100vw;
     font-family: "Anton", serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -354,29 +355,76 @@ nav li:first-child {
     animation-duration: 1s;
 }
 
-.slider-container {
-    border-top: 0.5px solid #e5e5e5;
-    display: flex;
-    flex-direction: column;
+.slider-wrapper {
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
 }
 
-.slider-container h2 {
+.slider-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+}
+
+.slider-container img {
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttons {
+    position: absolute;
+    top: 320%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     font-family: "Anton", serif;
-    color: #e5e5e5;
-    font-size: 70px;
-    line-height: 1.5;
-    padding-bottom: 10px;         /*padding was added*/
+    font-weight: bold;
+    border: none;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    color: yellow;
+}
+
+/*.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.5px solid #e5e5e5;
+}
+
+.slider-container {
     /*position: relative;
-    right: 29.5rem;*/
-    margin-left: 80px;
+    max-width: 48rem;
+    margin: 0 auto;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
 }
 
 .list {
     display: flex;
-    justify-content: center;
+    /*justify-content: center;
     align-items: center;
     flex-direction: row;
-    /*background-color: wheat;*/
+    /*background-color: wheat;
     margin-top: 1rem;
     margin-left: 1rem;
     width: 100%;
@@ -384,6 +432,24 @@ nav li:first-child {
     background-color: white;
 }
 
-.list img{
-    object-fit: contain;
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-wrapper h2 {
+    font-family: "Anton", serif;
+    color: #e5e5e5;
+    font-size: 70px;
+    line-height: 1.5;
+    padding-bottom: 10px;         /*padding was added*/
+    /*position: relative;
+    right: 29.5rem;
+    margin-left: 80px;
+    margin-bottom: auto;
+}*/
+
+.list img:not(img:first-child){
+    display: none;
 }
