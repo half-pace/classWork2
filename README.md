@@ -17,7 +17,7 @@ This repository contains the source code for this single-page personal profile w
 
 ## Features
 
-*   **Minimalist Design:** A clean and modern layout with a two-tone color palette (`#fff7f0` and `#262523`).
+*   **Minimalist Design:** A clean and modern layout with a two-tone color palette (`#e5e5e5` and `#1A1A1A`).
 *   **Dynamic Header:** A unique header that creatively spells out the name "halfpace" - the username to most of my other social presence.
 *   **About Me Section:** Features a circular profile picture, a concise biography, and a list of hobbies and skills.
 *   **Social Links:** An organized section with clickable links to GitHub, Discord, and email.
@@ -63,3 +63,4 @@ or to visit the site directly, click on the following link: https://half-pace.gi
 └── contact.html         # HTML file for Contact Form
 └── images.html          # HTML file for Image Gallery
 └── form.js              # JS file for the interactivity of Image Gallery
+
