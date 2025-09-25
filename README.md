@@ -60,7 +60,9 @@ or to visit the site directly, click on the following link: https://half-pace.gi
 |   └── halloween.jpeg   # extra image
 ├── index.html           # Main HTML file for content and structure
 └── style.css            # Stylesheet for appearance and layout
+└── project.html         # HTML file for the rest of the project
 └── contact.html         # HTML file for Contact Form
 └── images.html          # HTML file for Image Gallery
 └── form.js              # JS file for the interactivity of Image Gallery
+
 
