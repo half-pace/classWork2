@@ -578,3 +578,113 @@ input[type="submit"] {
 #success {
     color: green;
 }
+
+.parent-wrapper {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 80%;
+    text-align: center;
+    margin: 4rem 0;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+}
+
+.content h1 {
+    border-bottom: 2px solid white;
+    color: white;
+    grid-column: span 2 / span 2;
+}
+
+.todo-wrapper {
+    grid-row: span 4 / span 4;
+    grid-row-start: 2;
+    background-color: pink;
+    border: 2px solid white;
+    margin-left: 0.2rem;
+}
+
+.calc-wrapper {
+    grid-row: span 4 / span 4;
+    grid-row-start: 2;
+    background-color: red;
+    margin-right: 0.2rem;
+    border: 2px solid white;
+}
+
+.todo-wrapper .todo {
+    background-color: #e5e5e5;
+    height: 100%;
+}
+
+.calc-wrapper .calc {
+    background-color: #e5e5e5;
+    height: 100%;
+}
+
+.todo-wrapper .todo a {
+    background-color: red;
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+}
+
+.todo-wrapper .todo a img {
+    background-color: green;
+    display: inline-block; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.todo-wrapper .todo h3 {
+    padding-top: 0.5rem;
+    border-top: 2px solid black;
+    margin-top: 0;
+    padding-top: 2rem;
+}
+
+.todo-wrapper .todo img:hover {
+    cursor: pointer;
+}
+
+.calc-wrapper .calc a {
+    background-color: red;
+    display: inline-block;
+    width: 100%;
+    height: 80%;
+}
+
+.calc-wrapper .calc a img{
+    background-color: pink;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.calc-wrapper .calc h3 {
+    padding-top: 0.5rem;
+    border-top: 2px solid black;
+    padding-top: 2rem;
+}
+
+/* @media (max-width: 665px){
+    .todo-wrapper .todo h3 {
+        padding-top: 0.5rem;
+    }
+} */
+
+.calc-wrapper .calc a:hover {
+    cursor: pointer;
+}
