@@ -688,3 +688,269 @@ input[type="submit"] {
 .calc-wrapper .calc a:hover {
     cursor: pointer;
 }
+
+.calc-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+}
+
+.calc-container h3 {
+    border-bottom: 2px solid white;
+    width: 60%;
+    text-align: center;
+    margin: 1rem;
+    color: #e5e5e5;
+}
+
+.calc-content {
+    background-color: #e5e5e5;
+    width: 50%;
+    height: 90%;
+    border: 2px solid white;
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 8px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.display {
+    grid-column: span 4 / span 4;
+    background-color: pink;
+    border: 2px solid #1A1A1A;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 500px;
+}
+
+.AC {
+    grid-row-start: 2;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.percent {
+    grid-row-start: 2;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.del {
+    grid-row-start: 2;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.divide {
+    grid-row-start: 2;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.seven {
+    grid-row-start: 3;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.eight {
+    grid-row-start: 3;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.nine {
+    grid-row-start: 3;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.multi {
+    grid-row-start: 3;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.four {
+    grid-row-start: 4;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.five {
+    grid-row-start: 4;
+    background-color: cornsilk;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.six {
+    grid-row-start: 4;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sub {
+    grid-row-start: 4;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.one {
+    grid-row-start: 5;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.two {
+    grid-row-start: 5;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.three {
+    grid-row-start: 5;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.add {
+    grid-row-start: 5;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px #1A1A1A;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.zeroes {
+    grid-row-start: 6;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.zero {
+    grid-row-start: 6;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.period {
+    grid-row-start: 6;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px #1A1A1A;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.equals {
+    grid-row-start: 6;
+    background-color: crimson;
+    border: 1px solid #1A1A1A;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 2px #1A1A1A;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    padding-top: 15px;
+}
