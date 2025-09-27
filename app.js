@@ -77,64 +77,158 @@ function emailIsValid(email){
 
 
 // To-Do List Logic
+
+// const taskInput = document.getElementById("taskInput");
+// const addBtn = document.getElementById("addBtn");
+// const taskList = document.getElementById("taskList");
+
+// let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+// tasks.forEach(task => renderTask(task));
+
+// addBtn.addEventListener("click", () => {
+//     const taskText = taskInput.value.trim();
+//     if(taskText === "") return;
+
+//     const task = {text: taskText, completed: false};
+//     tasks.push(task);
+//     saveTasks();
+//     renderTask(task);
+//     taskInput.value = "";
+// });
+
+// function renderTask(task) {
+//     const li = document.createElement("li");
+//     li.className = "task-item";
+//     if(task.completed) li.classList.add("completed");
+
+//     const span = document.createElement("span");
+//     span.textContent = task.text;
+
+//     const btnContainer = document.createElement("div");
+//     btnContainer.className = "task-buttons";
+
+//     const completeBtn = document.createElement("button");
+//     completeBtn.textContent = "✓";
+//     completeBtn.className = "complete-btn";
+//     completeBtn.addEventListener("click", () => {
+//         task.completed = !task.completed;
+//         li.classList.toggle("completed");
+//         saveTasks();
+//     });
+
+//     const deleteBtn = document.createElement("button");
+//     deleteBtn.textContent = "✕";
+//     deleteBtn.className = "delete-btn";
+//     deleteBtn.addEventListener("click", () => {
+//         tasks = tasks.filter(t => t !== task);
+//         li.remove();
+//         saveTasks;
+//     });
+
+//     btnContainer.appendChild(completeBtn);
+//     btnContainer.appendChild(deleteBtn);
+
+//     li.appendChild(span);
+//     li.appendChild(btnContainer);
+//     taskList.appendChild(li);
+// }
+
+// function saveTasks() {
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
+// }
+
 const taskInput = document.getElementById("taskInput");
 const addBtn = document.getElementById("addBtn");
 const taskList = document.getElementById("taskList");
 
+// Load tasks from localStorage
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 tasks.forEach(task => renderTask(task));
 
-addBtn.addEventListener("click", () => {
-    const taskText = taskInput.value.trim();
-    if(taskText === "") return;
+// Add task on button click
+addBtn.addEventListener("click", addTask);
 
-    const task = {task: taskText, completed: false};
-    tasks.push(task);
-    saveTasks();
-    renderTask(task);
-    taskInput.value = "";
+// Add task on pressing Enter
+taskInput.addEventListener("keypress", (e) => {
+  if(e.key === "Enter") addTask();
 });
 
+function addTask() {
+  const taskText = taskInput.value.trim();
+  if(taskText === "") return;
+
+  const task = { text: taskText, completed: false };
+  tasks.push(task);
+  saveTasks();
+  renderTask(task);
+  taskInput.value = "";
+}
+
 function renderTask(task) {
-    const li = document.createElement("li");
-    li.className = "task-item";
-    if(task.completed) li.classList.add("completed");
+  const li = document.createElement("li");
+  li.className = "task-item";
+  if(task.completed) li.classList.add("completed");
 
-    const span = document.createElement("span");
-    span.textContent = task.text;
+  const span = document.createElement("span");
+  span.textContent = task.text;
+  span.addEventListener("click", () => editTask(task, span));
 
-    const btnContainer = document.createElement("div");
-    btnContainer.className = "task-buttons";
+  const btnContainer = document.createElement("div");
+  btnContainer.className = "task-buttons";
 
-    const completeBtn = document.createElement("button");
-    completeBtn.textContent = "✓";
-    completeBtn.className = "complete-btn";
-    completeBtn.addEventListener("click", () => {
-        task.completed = !task.completed;
-        li.classList.toggle("completed");
-        saveTasks();
-    });
+  const completeBtn = document.createElement("button");
+  completeBtn.textContent = "✓";
+  completeBtn.className = "complete-btn";
+  completeBtn.addEventListener("click", () => {
+    task.completed = !task.completed;
+    li.classList.toggle("completed");
+    saveTasks();
+  });
 
-    const deleteBtn = document.createElement("button");
-    deleteBtn.textContent = "✕";
-    deleteBtn.className = "delete-btn";
-    deleteBtn.addEventListener("click", () => {
-        tasks = tasks.filter(t => t !== task);
-        li.remove();
-        saveTasks;
-    });
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "✕";
+  deleteBtn.className = "delete-btn";
+  deleteBtn.addEventListener("click", () => {
+    tasks = tasks.filter(t => t !== task);
+    li.remove();
+    saveTasks();
+  });
 
-    btnContainer.appendChild(completeBtn);
-    btnContainer.appendChild(deleteBtn);
-
-    li.appendChild(span);
-    li.appendChild(btnContainer);
-    taskList.appendChild(li);
+  btnContainer.appendChild(completeBtn);
+  btnContainer.appendChild(deleteBtn);
+  li.appendChild(span);
+  li.appendChild(btnContainer);
+  taskList.appendChild(li);
 }
 
+// Save tasks to localStorage
 function saveTasks() {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
+
+// Edit task inline
+function editTask(task, span) {
+  const input = document.createElement("input");
+  input.type = "text";
+  input.value = task.text;
+  input.className = "edit-input";
+  span.replaceWith(input);
+  input.focus();
+
+  // Save edited task on Enter or blur
+  input.addEventListener("keypress", (e) => {
+    if(e.key === "Enter") finishEdit();
+  });
+  input.addEventListener("blur", finishEdit);
+
+  function finishEdit() {
+    task.text = input.value.trim() || task.text;
+    saveTasks();
+    span.textContent = task.text;
+    input.replaceWith(span);
+  }
+}
+
 
 
 
