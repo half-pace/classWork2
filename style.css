@@ -697,6 +697,7 @@ input[type="submit"] {
     /* background-color: red; */
     width: 100vw;
     height: 100vh;
+    padding: 20px;
 }
 
 .calc-container h3 {
@@ -726,9 +727,18 @@ input[type="submit"] {
     background-color: pink;
     border: 2px solid #1A1A1A;
     border-radius: 10px;
-    text-align: center;
-    padding-top: 20px;
-    padding-left: 500px;
+    /* text-align: center; */
+    /* padding-top: 20px;
+    padding-left: 500px; */
+}
+
+.display .screen {
+    background-color: pink;
+    border-radius: 10px;
+    font-size: 34px;
+    overflow: auto;
+    text-align: right;
+    padding: 10px;
 }
 
 .AC {
@@ -954,3 +964,9 @@ input[type="submit"] {
     text-align: center;
     padding-top: 15px;
 }
+
+.calc-content div:not(:first-child):hover {
+    cursor: pointer;
+    box-shadow: 1px 2px inset #1A1A1A;
+}
+
