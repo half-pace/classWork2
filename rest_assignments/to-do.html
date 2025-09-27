@@ -6,7 +6,7 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Titus">
         <meta name="description" content="image page">
-        <title>To-Do</title>
+        <title>To-Do List</title>
         <link rel="stylesheet" href="../style.css">
         <link rel="icon" href="../img/freakygoat.jpeg" type="image/x-icon">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -37,7 +37,19 @@
         </nav>
     </header>
 
-    <main></main>
+    <main>
+        <section class="main-container">
+            <div class="to-do">
+                <h1>To-Do List</h1>
+
+                <div class="input-sec">
+                    <input type="text" id="taskInput" placeholder="Add a new task..">
+                    <button id="addBtn">Add</button>
+                </div>
+                <ul id="taskList"></ul>
+            </div>
+        </section>
+    </main>
 
     <footer></footer>
 

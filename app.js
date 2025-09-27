@@ -75,6 +75,12 @@ function emailIsValid(email){
     return pattern.test(email);
 }
 
+
+// To-Do List Logic
+
+
+
+
 //calculator logic
 
 // let currentValue = 0;
