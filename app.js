@@ -77,7 +77,64 @@ function emailIsValid(email){
 
 
 // To-Do List Logic
+const taskInput = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const taskList = document.getElementById("taskList");
 
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+tasks.forEach(task => renderTask(task));
+
+addBtn.addEventListener("click", () => {
+    const taskText = taskInput.value.trim();
+    if(taskText === "") return;
+
+    const task = {task: taskText, completed: false};
+    tasks.push(task);
+    saveTasks();
+    renderTask(task);
+    taskInput.value = "";
+});
+
+function renderTask(task) {
+    const li = document.createElement("li");
+    li.className = "task-item";
+    if(task.completed) li.classList.add("completed");
+
+    const span = document.createElement("span");
+    span.textContent = task.text;
+
+    const btnContainer = document.createElement("div");
+    btnContainer.className = "task-buttons";
+
+    const completeBtn = document.createElement("button");
+    completeBtn.textContent = "✓";
+    completeBtn.className = "complete-btn";
+    completeBtn.addEventListener("click", () => {
+        task.completed = !task.completed;
+        li.classList.toggle("completed");
+        saveTasks();
+    });
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "✕";
+    deleteBtn.className = "delete-btn";
+    deleteBtn.addEventListener("click", () => {
+        tasks = tasks.filter(t => t !== task);
+        li.remove();
+        saveTasks;
+    });
+
+    btnContainer.appendChild(completeBtn);
+    btnContainer.appendChild(deleteBtn);
+
+    li.appendChild(span);
+    li.appendChild(btnContainer);
+    taskList.appendChild(li);
+}
+
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 
 
