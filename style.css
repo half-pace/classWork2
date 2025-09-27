@@ -648,10 +648,9 @@ input[type="submit"] {
 }
 
 .todo-wrapper .todo h3 {
-    padding-top: 0.5rem;
+    padding-top: 0.8rem;
     border-top: 2px solid black;
     margin-top: 0;
-    padding-top: 2rem;
 }
 
 .todo-wrapper .todo img:hover {
@@ -674,9 +673,9 @@ input[type="submit"] {
 }
 
 .calc-wrapper .calc h3 {
-    padding-top: 0.5rem;
+    /* padding-top: 0.5rem; */
     border-top: 2px solid black;
-    padding-top: 2rem;
+    padding-top: 0.8rem;
 }
 
 /* @media (max-width: 665px){
