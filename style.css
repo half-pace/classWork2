@@ -1059,3 +1059,14 @@ input[type="submit"] {
     background: #dc3545;
     color: white;
 }
+
+@media (max-width: 500px) {
+    #taskInput, #addBtn {
+      font-size: 14px;
+      padding: 8px;
+    }
+    .task-buttons button {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+  }
