@@ -10,7 +10,7 @@
 - Experiment 6 - To-Do List. (in process)
 - Experiment 7 - Dynamic content filtering. (in process)
 - Experiment 8 - Countdown timer. (in process)
-- Experiment 9 - Basic Calculator. (in process)
+- Experiment 9 - Basic Calculator.
 - Experiment 10 - API Data Fetching and Display. (in process)
 
 This repository contains the source code for this single-page personal profile website containing all the experiments mentioned above. Created as a class assignment, this project serves as a digital introduction, showcasing personal information, interests, and social links with a clean, modern aesthetic.
@@ -52,19 +52,21 @@ or to visit the site directly, click on the following link: https://half-pace.gi
 ```
 .
 ├── img/
-│   └── Akali (1).jpeg   # Profile picture
-│   └── akali.jpeg       # Extra image
-│   └── profile.jpg      # Favicon
-|   └── japanese.jpeg    # extra image
-|   └── gameicon.jpeg    # extra image
-|   └── halloween.jpeg   # extra image
-├── index.html           # Main HTML file for content and structure
-└── style.css            # Stylesheet for appearance and layout
-└── assignments.html     # HTML file for the rest of the project
-    └── todo-List.html   # HTML file for the to-do list assignment
-    └── Calculator.html  # HTML file for the calculator assignment
-└── contact.html         # HTML file for Contact Form
-└── images.html          # HTML file for Image Gallery
-└── form.js              # JS file for the interactivity of Image Gallery
+│   └── Akali (1).jpeg        # Profile picture
+│   └── akali.jpeg            # Extra image
+│   └── profile.jpg           # Favicon
+|   └── japanese.jpeg         # extra image
+|   └── gameicon.jpeg         # extra image
+|   └── halloween.jpeg        # extra image
+├── index.html                # Main HTML file for content and structure
+├── style.css                 # Stylesheet for appearance and layout
+├── assignments.html          # HTML file connecting the rest of the project
+├── contact.html              # HTML file for Contact Form
+├── images.html               # HTML file for Image Gallery
+├── rest_assignments/         # contains the rest of the assignments
+|   └── calculator.html       # HTML file for the calculator assignment
+|   └── countdowntimer.html   # HTML file for the Countdown Timer Assignment
+|   └── to-do.html            # HTML file for the To-Do List Assignment
+└── form.js                   # JS file for the interactivity of Image Gallery
 
 
