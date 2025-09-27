@@ -1,3 +1,26 @@
+function showSideBar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+}
+
+function hideSideBar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'none';
+}
+
+
+//const mainImg = document.getElementById("main-img");    both works this and the one below
+const mainImg = document.querySelector("#main img");
+
+const thumbnails = document.querySelectorAll(".thumbs img");
+
+thumbnails.forEach(thumb => {
+    thumb.addEventListener("click", function () {
+        mainImg.src = thumb.src;
+        mainImg.alt = thumb.alt;
+    });
+});
+
 //getting data
 const nameInput = document.querySelector("#fullName");
 const email = document.querySelector("#email");
