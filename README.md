@@ -7,7 +7,7 @@
 - Experiment 3 - Responsive Navigation Bar.
 - Experiment 4 - Interactive Image Gallery.
 - Experiment 5 - Form Validation.
-- Experiment 6 - To-Do List. (in process)
+- Experiment 6 - To-Do List. 
 - Experiment 7 - Dynamic content filtering. (in process)
 - Experiment 8 - Countdown timer. (in process)
 - Experiment 9 - Basic Calculator.
